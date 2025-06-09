@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Positioning Example - Custom Tags</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 2000px;
+      font-family: sans-serif;
+    }
+
+    ac, dc, ef, gh, container {
+      display: block;
+      width: 200px;
+      height: 100px;
+      color: white;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    ac {
+      background: #e67e22;
+      position: relative;
+      top: 20px;
+      left: 20px;
+    }
+
+    container {
+      position: relative;
+      height: 200px;
+      background: #ecf0f1;
+      border: 1px dashed #aaa;
+      margin-bottom: 20px;
+    }
+
+    dc {
+      background: #9b59b6;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    ef {
+      background: #2ecc71;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 1000;
+    }
+
+    gh {
+      background: #e74c3c;
+      position: sticky;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <ac>Relative Position</ac>
+
+  <container>
+    <dc>Absolute Position</dc>
+  </container>
+
+  <ef>Fixed Position</ef>
+
+  <div style="height: 1000px; padding-top: 200px;">
+    <gh>Sticky Position</gh>
+  </div>
+
+</body>
+</html>
